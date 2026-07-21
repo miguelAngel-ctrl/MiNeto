@@ -62,7 +62,7 @@ public class menu {
                 System.out.printf("""
                     
                     --------------------------
-                    opción incorrecta ¿ %d ?
+                    opción incorrecta ¿%d?
                     --------------------------
                     
                     oprime (enter) para reintentar.
