@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public abstract class leerArchivos {
+public abstract class LeerArchivos {
 
     public final void archivo(String rutaArchivo) {
         //leer archivos de texto
@@ -17,7 +17,7 @@ public abstract class leerArchivos {
                 leeLinea(linea);
             }
 
-            //metodo secundario personalizable
+            //método secundario personalizable
             totalNeto();
 
         } catch (IOException e) {
@@ -27,7 +27,7 @@ public abstract class leerArchivos {
 
 
     }
-    //metodo personalizable para clases hijas
+    //método personalizable para clases hijas
     protected abstract void leeLinea(String linea);
     protected abstract void totalNeto();
 

@@ -1,13 +1,13 @@
 package com.MiNeto;
 
-public class menu {
+public class Menu {
     public static boolean opciones (int opcion) {
 
         switch (opcion) {
             case 1 -> {
-                //agregar escribirEnArchivo
-               //imprime banner(banner.java)
-                variables.bannerTxt.archivo(variables.url);
+                //agregar EscribirEnArchivo
+               //imprime Banner(Banner.java)
+                Variables.BANNER_TXT.archivo(Variables.URL);
 
                 System.out.println("""
                         
@@ -17,31 +17,31 @@ public class menu {
                         """);
 
                 System.out.print("fecha: DD/MM/YYYY: ");
-                String fecha = variables.scanner.nextLine();
+                String fecha = Variables.SCANNER.nextLine();
 
                 System.out.print("Kilómetros: ");
-                double kilometros = variables.scanner.nextDouble();
+                double kilometros = Variables.SCANNER.nextDouble();
 
                 System.out.print("Gastos: ");
-                long gastos = variables.scanner.nextLong();
+                long gastos = Variables.SCANNER.nextLong();
 
                 System.out.print("Propinas: ");
-                long propinas = variables.scanner.nextLong();
+                long propinas = Variables.SCANNER.nextLong();
 
                 System.out.print("Ganancia: ");
-                long ganancia = variables.scanner.nextLong();
+                long ganancia = Variables.SCANNER.nextLong();
 
-                //crear objeto y enviar parámetros al constructor
-                constructor datos = new constructor(fecha, kilometros, gastos, propinas, ganancia);
+                //crear objeto y enviar parámetros al Constructor
+                Constructor datos = new Constructor(fecha, kilometros, gastos, propinas, ganancia);
 
-                //guardar datos en el archivo de texto(escribirEnArchivo.java)
-                escribirEnArchivo.agregar(datos);
+                //guardar datos en el archivo de texto(EscribirEnArchivo.java)
+                EscribirEnArchivo.agregar(datos);
 
-                variables.scanner.nextLine();
+                Variables.SCANNER.nextLine();
 
             }
 
-            case 2 -> variables.calcular.archivo(variables.url2);//ver ganancia mensual(calcularGanancia.java)
+            case 2 -> Variables.CALCULAR.archivo(Variables.URL_2);//ver ganancia mensual(CalcularGanancia.java)
 
             case 3 -> {
                 //salir
@@ -52,7 +52,7 @@ public class menu {
                         --------------------------
                         """);
 
-                variables.scanner.close();
+                Variables.SCANNER.close();
                 return false;
 
             }
@@ -68,7 +68,7 @@ public class menu {
                     oprime (enter) para reintentar.
                     
                     """, opcion);
-                variables.scanner.nextLine();
+                Variables.SCANNER.nextLine();
 
             }
 

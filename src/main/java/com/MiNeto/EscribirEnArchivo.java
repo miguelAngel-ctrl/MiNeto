@@ -4,8 +4,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class escribirEnArchivo {
-    public static void agregar(constructor rf){
+public class EscribirEnArchivo {
+    public static void agregar(Constructor rf){
         try (BufferedWriter escribir = new BufferedWriter(new FileWriter("dias.txt",true))) {
             //escribir objeto en el archivo de texto
             escribir.write(rf.toString());
@@ -18,7 +18,7 @@ public class escribirEnArchivo {
                     oprime (enter) para continuar...
                     
                     """);
-            variables.scanner.nextLine();
+            Variables.SCANNER.nextLine();
 
         }catch (IOException e){
             System.out.println("""
@@ -28,7 +28,7 @@ public class escribirEnArchivo {
                     oprime (enter) para continuar...
                     
                     """);
-            variables.scanner.nextLine();
+            Variables.SCANNER.nextLine();
 
         }
 

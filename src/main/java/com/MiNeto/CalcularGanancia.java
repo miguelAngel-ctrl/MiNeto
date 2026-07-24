@@ -1,11 +1,11 @@
 package com.MiNeto;
 
-public class calcularGanancia extends leerArchivos {
+public class CalcularGanancia extends LeerArchivos {
     String fecha;
     double kilometros = 0, sumaKilometros = 0;
     long gastos = 0, propinas = 0, ganancia = 0, sumaGanancia = 0, sumaPropinas = 0, sumaGastos = 0;
 
-    //sobreescribir método padre(leerArchivos.java)
+    //sobreescribir método padre(LeerArchivos.java)
     @Override
     protected void leeLinea(String linea) {
 
@@ -13,8 +13,8 @@ public class calcularGanancia extends leerArchivos {
         String[] dias = linea.split(",");
 
         /*separar nombre(referencia) del valor que se va a sustraer.
-        (se eliminan los nombres de las variables del archivo de texto)
-        y se guardan en variables en memoria(ram)*/
+        (se eliminan los nombres de las Variables del archivo de texto)
+        y se guardan en Variables en memoria(ram)*/
         for (String dia : dias) {
             if (dia.trim().startsWith("kilómetros:")) {
                 kilometros = Double.parseDouble(dia.substring("kilómetros:".length()));
@@ -47,7 +47,7 @@ public class calcularGanancia extends leerArchivos {
     //mostrar ganancia total del mes
     @Override
     protected void totalNeto() {
-        //reutilizo variables
+        //reutilizo Variables
         ganancia = (sumaGanancia + sumaPropinas) - sumaGastos;
 
         System.out.printf("""
@@ -67,7 +67,7 @@ public class calcularGanancia extends leerArchivos {
                 
                 """, sumaKilometros, sumaPropinas, sumaGastos, sumaGanancia, ganancia);
 
-        variables.scanner.nextLine();
+        Variables.SCANNER.nextLine();
 
     }
 

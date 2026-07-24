@@ -1,6 +1,6 @@
 package com.MiNeto;
 
-public class banner extends leerArchivos {
+public class Banner extends LeerArchivos {
     //Sobreescribir método del padre(polimorfismo)
     @Override
     protected void leeLinea(String linea) {

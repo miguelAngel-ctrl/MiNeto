@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class constructor {
+public class Constructor {
     private String fecha;
     private double kilometros;
     private long gastos, propinas, ganancia;

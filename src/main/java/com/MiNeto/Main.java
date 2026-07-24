@@ -6,8 +6,8 @@ public class Main {
         int opcion;
 
         do {
-            //mostrar banner(banner.java)
-            variables.bannerTxt.archivo(variables.url);
+            //mostrar Banner(Banner.java)
+            Variables.BANNER_TXT.archivo(Variables.URL);
 
             System.out.println("""
                     Menu.
@@ -16,11 +16,11 @@ public class Main {
                     
                     """);
             System.out.print("Ingrese opción: ");
-            opcion = variables.scanner.nextInt();
+            opcion = Variables.SCANNER.nextInt();
 
-            variables.scanner.nextLine();
+            Variables.SCANNER.nextLine();
 
-        } while (menu.opciones(opcion));
+        } while (Menu.opciones(opcion));
 
 
     }
